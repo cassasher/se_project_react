@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 32px 0 28px;
+  margin-right: 40px;
+}
+
+.header__logo {
+  margin-left: 40px;
+  margin-right: 24px;
+}
+
+.header__date_location {
+  margin: 0;
+}
+
+.header__add_clothes {
+  margin-left: auto;
+}
+
+.header__user_container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 20px;
+}
+
+.header__username {
+  margin: 0;
+}
