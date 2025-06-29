@@ -49,7 +49,7 @@ export const weatherOptions = [
 
   {
     day: false,
-    condition: "fot",
+    condition: "fog",
     url: new URL("./images/nightfog.png", import.meta.url).href,
   },
 
