@@ -1,7 +1,17 @@
 .card {
-  width: 323px;
+  width: 325px;
   height: 328px;
   position: relative;
+}
+
+.cards__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .card__name {
@@ -12,4 +22,15 @@
 
 .card__image {
   width: 100%;
+  border-radius: 12px;
+}
+
+.cards__text {
+  margin-top: 40px;
+  margin-bottom: 34px;
+  margin-left: 40px;
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 100%;
 }

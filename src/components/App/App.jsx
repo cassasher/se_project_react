@@ -56,8 +56,8 @@ function App() {
           <input
             type="text"
             className="modal__input"
-            id="name"
-            placeholder="name"
+            id="Name"
+            placeholder="Name"
           />
         </label>
         <label htmlFor="imageURL" className="modal__label">

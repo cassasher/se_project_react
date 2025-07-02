@@ -2,27 +2,52 @@
   display: flex;
   align-items: center;
   padding: 32px 0 28px;
-  margin-right: 40px;
+  margin: 32px 40px 0;
 }
 
 .header__logo {
-  margin-left: 40px;
   margin-right: 24px;
 }
 
 .header__date_location {
   margin: 0;
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0%;
 }
 
 .header__add_clothes {
   margin-left: auto;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0%;
 }
 
+.header__add_clothes::before {
+  content: "+";
+  font-size: 18px;
+  font-weight: bold;
+}
 .header__user_container {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-left: 20px;
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
 .header__username {
