@@ -87,13 +87,13 @@ export const defaultClothingItems = [
   {
     _id: 1,
     name: "Hoodie",
-    weather: "warm",
+    weather: "cold",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Hoodie.png?etag=5f52451d0958ccb1016c78a45603a4e8",
   },
   {
     _id: 2,
     name: "Jacket",
-    weather: "cold",
+    weather: "warm",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Jacket.png?etag=f4bb188deaa25ac84ce2338be2d404ad",
   },
   {
@@ -105,7 +105,7 @@ export const defaultClothingItems = [
   {
     _id: 4,
     name: "T-Shirt",
-    weather: "hot",
+    weather: "warm",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/T-Shirt.png?etag=44ed1963c44ab19cd2f5011522c5fc09",
   },
   {

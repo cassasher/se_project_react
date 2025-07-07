@@ -1,0 +1,21 @@
+.footer {
+  background-color: white;
+  padding: 16px 40px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.footer__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__text {
+  color: black;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: Inter, sans-serif;
+}
