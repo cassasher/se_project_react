@@ -14,7 +14,11 @@ export const getWeather = (coordinates, APIkey) => {
 export const filterWeatherData = (data) => {
   const result = {};
   result.city = data.name;
-  result.temp = { F: data.main.temp }; // main.temp is from the dev tools
+  result.temp = {
+    F: data.main.temp,
+    C: Math.round(((data.main.temp - 32) * 5) / 9),
+  }; // main.temp is from the dev tools
+
   result.condition = data.weather[0].main.toLowerCase(); //weather is an array
   result.type = weatherType(result.temp.F);
   result.isDay = isDay(data.sys, Date.now);
