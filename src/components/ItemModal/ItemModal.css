@@ -53,9 +53,10 @@
 
 .modal__weather {
   margin: 0;
-  font-size: 16px;
+  font-size: 20px;
   color: black;
-  font-weight: 500;
+  font-weight: 700;
+  line-height: 24px;
   flex: 1;
 }
 
@@ -72,4 +73,31 @@
   border: none;
   cursor: pointer;
   z-index: 2;
+}
+
+.modal__info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  min-height: 368px;
+}
+
+.modal__deleteItem {
+  width: 101px;
+  height: 24px;
+  padding: 0;
+  background: none;
+  border: none;
+  color: #ff4d00;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.modal__deleteItem:hover {
+  color: #cc3d00;
 }

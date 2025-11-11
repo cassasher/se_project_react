@@ -1,4 +1,4 @@
-import { useEffect, Children, useState } from "react";
+import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "../Header/Header";
@@ -10,9 +10,9 @@ import { coordinates, APIkey } from "../../utils/constants";
 import Footer from "../Footer/Footer";
 import { CurrentTemperatureUnitContext } from "../../contexts/CurrentTemperatureUnitContext";
 import Profile from "../Profile/Profile";
-import { getItems } from "../../utils/api";
 import AddItemModal from "../AddItemModal/AddItemModal";
-import { addItem } from "../../utils/api";
+import { deleteItem, getItems, addItem } from "../../utils/api";
+import DeleteConfirm from "../DeleteConfirm/DeleteConfirm";
 
 function App() {
   const [weatherData, setWeatherData] = useState({
@@ -46,6 +46,21 @@ function App() {
     addItem(item)
       .then((newItem) => {
         setClothingItems([newItem, ...clothingItems]);
+        closeActiveModal();
+      })
+      .catch(console.error);
+  };
+
+  const handleDeleteClick = () => {
+    setActiveModal("confirm-delete");
+  };
+
+  const handleConfirmDelete = () => {
+    deleteItem(selectedCard._id)
+      .then(() => {
+        setClothingItems(
+          clothingItems.filter((item) => item._id !== selectedCard._id)
+        );
         closeActiveModal();
       })
       .catch(console.error);
@@ -107,6 +122,13 @@ function App() {
           activeModal={activeModal}
           card={selectedCard}
           handleCloseClick={closeActiveModal}
+          handleDeleteItem={handleDeleteClick}
+        />
+        <DeleteConfirm
+          isOpen={activeModal === "confirm-delete"}
+          onClose={closeActiveModal}
+          onConfirm={handleConfirmDelete}
+          itemName={selectedCard.name}
         />
         <Footer />
       </div>

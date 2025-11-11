@@ -13,9 +13,10 @@ const AddItemModal = ({ isOpen, onAddItem, onCloseModal }) => {
     e.preventDefault();
     onAddItem({
       name: values.name,
-      imageUrl: values.imageUrl,
+      link: values.imageUrl,
       weather: values.weather,
     });
+    resetForm();
   };
 
   return (
