@@ -1,0 +1,65 @@
+.clothes-section {
+  max-width: 1360px;
+  width: 100%;
+}
+
+.clothes-section__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 16px;
+  width: 229;
+  height: 56;
+  top: 119px;
+  left: 40px;
+  opacity: 1;
+  border-width: 1px;
+}
+
+.clothes-section__title {
+  font-family: Cabinet Grotesque, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 100%;
+  margin: 0;
+}
+
+.clothes-section__add-btn {
+  background: none;
+  border: none;
+  font-family: Cabinet Grotesque, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 0;
+}
+
+.clothes-section__add-btn:hover {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.clothes-section__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px;
+  list-style: none;
+  padding-right: 40px;
+  margin: 0;
+}
+
+.clothes-section__items .card {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .clothes-section__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .clothes-section__items {
+    grid-template-columns: 1fr;
+  }
+}
