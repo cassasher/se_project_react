@@ -1,7 +1,7 @@
 .profile {
   display: flex;
   gap: 120px;
-  padding: 40px 40px 0;
+  /* padding: 40px 40px 0; */
   width: 100%;
   min-width: 1440px;
   margin: 0 auto;
