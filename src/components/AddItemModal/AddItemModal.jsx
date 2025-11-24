@@ -13,10 +13,15 @@ const AddItemModal = ({ isOpen, onAddItem, onCloseModal }) => {
     e.preventDefault();
     onAddItem({
       name: values.name,
-      link: values.imageUrl,
+      imageUrl: values.imageUrl,
       weather: values.weather,
-    });
-    resetForm();
+    })
+      .then(() => {
+        resetForm();
+      })
+      .catch((error) => {
+        console.error("Error adding item:", error);
+      });
   };
 
   return (
